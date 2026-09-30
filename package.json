@@ -1,0 +1,16 @@
+{
+  "name": "Node.js Server",
+  "version": "1.0.0",
+  "description": "A sample server in vanilla Node.js",
+  "main": "src/server.js",
+  "scripts": {
+    "prettier": "prettier --write .",
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "Jeremy Lanssiers",
+  "type": "module",
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
+}
