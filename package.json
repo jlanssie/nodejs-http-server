@@ -1,7 +1,7 @@
 {
-  "name": "Node.js Server",
+  "name": "nodejs-http-server",
   "version": "1.0.0",
-  "description": "A sample server in vanilla Node.js",
+  "description": "A sample HTTP server in vanilla Node.js",
   "main": "src/server.js",
   "scripts": {
     "prettier": "prettier --write .",
