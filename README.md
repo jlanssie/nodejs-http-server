@@ -1,10 +1,10 @@
-# Node.js Server
+# Node.js HTTP Server
 
-A sample server in vanilla Node.js.
+A sample HTTP server in vanilla Node.js.
 
 ## Installation
 
-Use JavaScript Package Manager [npm](https://www.npmjs.com/) to install Mock Server.
+Use JavaScript Package Manager [npm](https://www.npmjs.com/) to install.
 
 ```bash
 npm install
@@ -12,7 +12,7 @@ npm install
 
 ## Usage
 
-Use JavaScript Package Manager [npm](https://www.npmjs.com/) to run Mock Server.
+Use JavaScript Package Manager [npm](https://www.npmjs.com/) to run.
 
 ```shell
 npm run start
