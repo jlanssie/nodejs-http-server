@@ -1,6 +1,6 @@
-# Mock Server
+# Node.js Server
 
-A Node.js application to simulate local endpoints.
+A sample server in vanilla Node.js.
 
 ## Installation
 
