@@ -1,6 +1,5 @@
-export const COLORS = {
+const COLORS = {
   dim: 2,
-  red: 31,
   green: 32,
   yellow: 33,
   magenta: 35,
@@ -14,11 +13,12 @@ export function getColoredString(name, str) {
 
 export function getColoredStatusString(status) {
   const statusCode = Number(status);
-  const statusStr = String(status).padEnd(6);
+  const statusCodeString = String(status).padEnd(6);
 
-  if (statusCode >= 500) return getColoredString("red", statusStr);
-  if (statusCode >= 400) return getColoredString("yellow", statusStr);
-  if (statusCode >= 300) return getColoredString("cyan", statusStr);
-  if (statusCode >= 200) return getColoredString("green", statusStr);
-  return statusStr;
+  if (statusCode >= 500) return getColoredString("magenta", statusCodeString);
+  if (statusCode >= 400) return getColoredString("yellow", statusCodeString);
+  if (statusCode >= 300) return getColoredString("cyan", statusCodeString);
+  if (statusCode >= 200) return getColoredString("green", statusCodeString);
+
+  return statusCodeString;
 }

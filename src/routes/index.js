@@ -1,12 +1,11 @@
 import Router from "./router.class.js";
 import { matchRoute } from "../utils/index.js";
 
-export const handleRequest = (req, res) => {
+export const routeRequest = (req, res) => {
   const router = new Router().initRoutes();
 
   for (const route of router.getRoutes()) {
-    const match = matchRoute(route, req);
-    if (match) {
+    if (matchRoute(route, req)) {
       return route.handler(req, res);
     }
   }

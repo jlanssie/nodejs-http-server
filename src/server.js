@@ -1,14 +1,14 @@
 import http from "node:http";
-import { preHook, postHook } from "./middleware/index.js";
-import { handleRequest } from "./routes/index.js";
+import { runPreMiddleware, runPostMiddleware } from "./middleware/index.js";
+import { routeRequest } from "./routes/index.js";
 
 const port = 2345;
 
 const server = http.createServer(async (req, res) => {
   try {
-    await preHook(req, res);
-    handleRequest(req, res);
-    postHook(req, res);
+    await runPreMiddleware(req, res);
+    routeRequest(req, res);
+    runPostMiddleware(req, res);
   } catch (err) {
     console.error(err);
     if (!res.headersSent) {

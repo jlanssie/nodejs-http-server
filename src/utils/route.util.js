@@ -11,7 +11,7 @@ export function matchRoute(route, req) {
     return false;
   }
 
-  return routeSegments.every((routeSeg, i) => {
-    return routeSeg.startsWith(":") || routeSeg === pathSegments[i];
+  return routeSegments.every((routeSegment, i) => {
+    return routeSegment === pathSegments[i];
   });
 }
