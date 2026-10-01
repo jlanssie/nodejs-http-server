@@ -1,7 +1,7 @@
 import { getColoredStatusString, getColoredString } from "../utils/log.util.js";
 
 export default class Logger {
-  handleRequest(req) {
+  logRequest(req) {
     req._startTime = performance.now();
 
     const timeString = getColoredString("dim", new Date().toISOString());
@@ -10,7 +10,7 @@ export default class Logger {
     console.info(`${timeString} ${getColoredString("green", "⇢")} ${methodString} ${req.url}`);
   }
 
-  handleResponse(req, res) {
+  logResponse(req, res) {
     const durationString = req._startTime ? `${(performance.now() - req._startTime).toFixed(2)}ms` : "";
     const timeString = getColoredString("dim", new Date().toISOString());
     const statusString = getColoredStatusString(res.statusCode);
